@@ -35,4 +35,5 @@
   <li>Una cuenta puede no tener clientes relacionados con ella. </li>
 </ul>
 
-![Diagrama sin título drawio](https://github.com/Laurelindorean/Account_Project/assets/100615218/ac3c5d9d-a16c-413a-bb18-73caa0d138cd)
+![Diagrama sin título drawio (1)](https://github.com/Laurelindorean/Account_Project/assets/100615218/d8a0e909-b82b-4f7a-b0d8-690e91f18e4b)
+
