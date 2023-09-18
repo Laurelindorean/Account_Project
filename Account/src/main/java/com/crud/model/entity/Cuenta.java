@@ -10,8 +10,9 @@ import jakarta.persistence.Table;
  * @author Palmira
  *
  */
+/*
 @Entity
 @Table(name="cuenta")
-public class Cuenta {
+*/public class Cuenta {
 
 }

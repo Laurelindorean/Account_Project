@@ -10,8 +10,11 @@ import jakarta.persistence.Table;
  * @author Palmira
  *
  */
+/*
 @Entity
+
 @Table(name="movimiento")
+*/
 public class Movimiento {
 
 }
