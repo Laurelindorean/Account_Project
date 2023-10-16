@@ -16,7 +16,7 @@ CREATE TABLE cuenta(
     activa BOOLEAN
 );
 
-CREATE TABLE cliente_cuenta(
+CREATE TABLE pertenece(
     id INT PRIMARY KEY, 
     id_cliente INT, 
     id_cuenta INT, 
@@ -37,7 +37,7 @@ CREATE TABLE movimiento(
     id_cuenta INT,
     id_cuenta_origen INT, 
     id_cuenta_destino INT, 
-    cantidad INT, 
+    cantidad DOUBLE, 
     fecha DATE, 
     id_tipo INT,
     FOREIGN KEY(id_cuenta) REFERENCES cuenta (id)

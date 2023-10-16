@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author A200253764
+ * 
+ * @author Palmira
  *
  */
 @RestController
