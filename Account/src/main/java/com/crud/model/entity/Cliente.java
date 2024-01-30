@@ -27,7 +27,7 @@ import jakarta.persistence.Table;
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int idCliente;
+	int id;
 	String nif;
 	String nombre;
 	String apellidos;
@@ -45,10 +45,10 @@ public class Cliente {
 	 * @param fechaNacimiento
 	 * @param pertenece
 	 */
-	public Cliente(int idCliente, String nif, String nombre, String apellidos, Date fechaNacimiento,
+	public Cliente(int id, String nif, String nombre, String apellidos, Date fechaNacimiento,
 			List<Pertenece> pertenece) {
 		super();
-		this.idCliente = idCliente;
+		this.id = id;
 		this.nif = nif;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -56,12 +56,12 @@ public class Cliente {
 		this.pertenece = pertenece;
 	}
 
-	public int getIdCliente() {
-		return idCliente;
+	public int getId() {
+		return id;
 	}
 
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNif() {

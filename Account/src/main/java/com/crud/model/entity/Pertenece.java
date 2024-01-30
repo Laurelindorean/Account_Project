@@ -24,46 +24,67 @@ public class Pertenece {
 	private int id;
 	@ManyToOne
 	@JoinColumn(name = "id_cliente")
-	private int idCliente;
+	private Cliente cliente;
 	@ManyToOne
 	@JoinColumn(name = "id_cuenta")
-	private int idCuenta;
+	private Cuenta cuenta;
 	
 	/**
 	 * 
 	 * @param id
-	 * @param idCliente
-	 * @param idCuenta
+	 * @param cliente
+	 * @param cuenta
 	 */
-	public Pertenece(int id, int idCliente, int idCuenta) {
+	public Pertenece(int id, Cliente cliente, Cuenta cuenta) {
 		super();
 		this.id = id;
-		this.idCliente = idCliente;
-		this.idCuenta = idCuenta;
+		this.cliente = cliente;
+		this.cuenta = cuenta;
 	}
 
+	/**
+	 * @return the id
+	 */
 	public int getId() {
 		return id;
 	}
 
+	/**
+	 * @param id the id to set
+	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 
-	public int getIdCliente() {
-		return idCliente;
+	/**
+	 * @return the cliente
+	 */
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
+	/**
+	 * @param cliente the cliente to set
+	 */
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
-	public int getIdCuenta() {
-		return idCuenta;
+	/**
+	 * @return the cuenta
+	 */
+	public Cuenta getCuenta() {
+		return cuenta;
 	}
 
-	public void setIdCuenta(int idCuenta) {
-		this.idCuenta = idCuenta;
+	/**
+	 * @param cuenta the cuenta to set
+	 */
+	public void setCuenta(Cuenta cuenta) {
+		this.cuenta = cuenta;
 	}
 
+	
+
+	
 }

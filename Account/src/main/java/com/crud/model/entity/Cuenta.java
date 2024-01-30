@@ -27,7 +27,7 @@ public class Cuenta {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private String id;
 	private String banco;
 	private String nombre;
 	private int idPais;
@@ -36,7 +36,7 @@ public class Cuenta {
 	private boolean activa;
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cuenta")
 	private List<Pertenece> pertenece;
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "movimiento")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cuenta")
 	private List<Movimiento> movimiento;
 
 	/**
@@ -51,7 +51,7 @@ public class Cuenta {
 	 * @param pertenece
 	 * @param movimiento
 	 */
-	public Cuenta(int id, String banco, String nombre, int idPais, Date fechaAlta, Date fechaBaja, boolean activa,
+	public Cuenta(String id, String banco, String nombre, int idPais, Date fechaAlta, Date fechaBaja, boolean activa,
 			List<Pertenece> pertenece, List<Movimiento> movimiento) {
 		super();
 		this.id = id;
@@ -65,11 +65,11 @@ public class Cuenta {
 		this.movimiento = movimiento;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

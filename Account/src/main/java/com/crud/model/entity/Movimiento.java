@@ -27,14 +27,14 @@ public class Movimiento {
 	private int id;
 	@ManyToOne
 	@JoinColumn(name = "id_cuenta")
-	private int idCuenta;
-	private int idCuentaOrigen;
-	private int idCuentaDestino;
+	private Cuenta cuenta;
+	private String idCuentaOrigen;
+	private String idCuentaDestino;
 	private double cantidad;
 	private Date fecha;
 	@ManyToOne
 	@JoinColumn(name = "id_tipo")
-	private int idTipo;
+	private Tipo tipo;
 
 	/**
 	 * 
@@ -46,16 +46,16 @@ public class Movimiento {
 	 * @param fecha
 	 * @param idTipo
 	 */
-	public Movimiento(int id, int idCuenta, int idCuentaOrigen, int idCuentaDestino, double cantidad, Date fecha,
-			int idTipo) {
+	public Movimiento(int id, Cuenta cuenta, String idCuentaOrigen, String idCuentaDestino, double cantidad, Date fecha,
+			Tipo tipo) {
 		super();
 		this.id = id;
-		this.idCuenta = idCuenta;
+		this.cuenta = cuenta;
 		this.idCuentaOrigen = idCuentaOrigen;
 		this.idCuentaDestino = idCuentaDestino;
 		this.cantidad = cantidad;
 		this.fecha = fecha;
-		this.idTipo = idTipo;
+		this.tipo = tipo;
 	}
 
 	public int getId() {
@@ -66,27 +66,27 @@ public class Movimiento {
 		this.id = id;
 	}
 
-	public int getIdCuenta() {
-		return idCuenta;
+	public Cuenta getCuenta() {
+		return cuenta;
 	}
 
-	public void setIdCuenta(int idCuenta) {
-		this.idCuenta = idCuenta;
+	public void setCuenta(Cuenta cuenta) {
+		this.cuenta = cuenta;
 	}
 
-	public int getIdCuentaOrigen() {
+	public String getIdCuentaOrigen() {
 		return idCuentaOrigen;
 	}
 
-	public void setIdCuentaOrigen(int idCuentaOrigen) {
+	public void setIdCuentaOrigen(String idCuentaOrigen) {
 		this.idCuentaOrigen = idCuentaOrigen;
 	}
 
-	public int getIdCuentaDestino() {
+	public String getIdCuentaDestino() {
 		return idCuentaDestino;
 	}
 
-	public void setIdCuentaDestino(int idCuentaDestino) {
+	public void setIdCuentaDestino(String idCuentaDestino) {
 		this.idCuentaDestino = idCuentaDestino;
 	}
 
@@ -106,12 +106,12 @@ public class Movimiento {
 		this.fecha = fecha;
 	}
 
-	public int getIdTipo() {
-		return idTipo;
+	public Tipo getTipo() {
+		return tipo;
 	}
 
-	public void setIdTipo(int idTipo) {
-		this.idTipo = idTipo;
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
 	}
 
 }
