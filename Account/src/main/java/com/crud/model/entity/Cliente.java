@@ -27,12 +27,12 @@ import jakarta.persistence.Table;
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
-	String nif;
-	String nombre;
-	String apellidos;
+	private int id;
+	private String nif;
+	private String nombre;
+	private String apellidos;
 	@Column(name = "fecha_nacimiento")
-	Date fechaNacimiento;
+	private Date fechaNacimiento;
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
 	private List<Pertenece> pertenece;
 

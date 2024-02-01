@@ -66,5 +66,7 @@ INSERT INTO tipo (id, nombre, descripcion) VALUES (2, 'Sacar dinero', 'Sacar una
 INSERT INTO tipo (id, nombre, descripcion) VALUES (3, 'Ingreso a cuenta ajena', 'Ingresar dinero en efectivo a cuenta ajena');
 INSERT INTO tipo (id, nombre, descripcion) VALUES (4, 'Transferencia a cuenta ajena', 'Ingresar dinero de tu cuenta a una cuenta ajena');
 INSERT INTO tipo (id, nombre, descripcion) VALUES (5, 'Transferencia a cuenta propia', 'Ingresar dinero de una cuenta propia a otra');
+INSERT INTO tipo (id, nombre, descripcion) VALUES (6, 'Recibo Transferencia', 'Ingreso de dinero por transferencia ajena');
 
 INSERT INTO movimiento (id_cuenta, id_cuenta_origen, id_cuenta_destino, cantidad, fecha, id_tipo) VALUES ('1450-1345-11-1985', null, '1450-1345-11-1985', 100, '2024-01-30', 1);
+INSERT INTO movimiento (id_cuenta, id_cuenta_origen, id_cuenta_destino, cantidad, fecha, id_tipo) VALUES ('2817-7847-06-7417', '2817-7847-06-7417', '1450-1345-11-1985', 50, '2024-01-23', 4);
